@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 function Header({ startSlider }) {
@@ -25,6 +25,9 @@ function Header({ startSlider }) {
     }
     return page
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  } , [history.location.pathname])
   const openTool = () => {
     setCheckOpenTool(true)
   }
@@ -54,7 +57,7 @@ function Header({ startSlider }) {
         }
         {
           checkOpenTool ?
-            <nav id="navMobile yuynLe" className={`JzO0Vc jsnVQ`} style={{ backgroundColor: 'rgb(255, 255, 255)' }} jsname="ihoMLd" role="navigation" tabIndex={-1} jsaction="transitionend:UD2r5"><Link className="Zjiec oNsfjf" to="/"><span>bot rua</span></Link>
+            <nav id="navMobile yuynLe" className={`JzO0Vc jsnVQ animate__animated animate__fadeInLeft`} style={{ backgroundColor: 'rgb(255, 255, 255)' }} jsname="ihoMLd" role="navigation" tabIndex={-1} jsaction="transitionend:UD2r5"><Link className="Zjiec oNsfjf" to="/"><span>bot rua</span></Link>
               <ul className="jYxBte Fpy8Db" role="navigation" tabIndex={-1}>
                 <li jsname="ibnC6b" data-nav-level={1}>
                   <div className={`PsKE7e r8s4j-R6PoUb IKA38e baH5ib oNsfjf ${pageActive() === 'trangchu' ? 'lhZOrc' : ''}`}>
@@ -82,7 +85,35 @@ function Header({ startSlider }) {
                   </div>
                 </li>
               </ul>
-            </nav> : null
+            </nav> : <nav id="navMobile yuynLe" className={`JzO0Vc jsnVQ animate__animated animate__fadeOutLeft`} style={{ backgroundColor: 'rgb(255, 255, 255)' }} jsname="ihoMLd" role="navigation" tabIndex={-1} jsaction="transitionend:UD2r5"><Link className="Zjiec oNsfjf" to="/"><span>bot rua</span></Link>
+              <ul className="jYxBte Fpy8Db" role="navigation" tabIndex={-1}>
+                <li jsname="ibnC6b" data-nav-level={1}>
+                  <div className={`PsKE7e r8s4j-R6PoUb IKA38e baH5ib oNsfjf ${pageActive() === 'trangchu' ? 'lhZOrc' : ''}`}>
+                    <div className="I35ICb" jsaction="keydown:mPuKz(QwLHlb); click:vHQTA(QwLHlb);"><Link className="aJHbb dk90Ob hDrhEe HlqNPb" jsname="QwLHlb" role="link" tabIndex={0} data-navtype={1} to="/botrua/trangchu" >Trang
+                      chủ</Link></div>
+                  </div>
+                </li>
+                <li jsname="ibnC6b" data-nav-level={1}>
+                  <div className={`PsKE7e r8s4j-R6PoUb IKA38e baH5ib oNsfjf ${pageActive() === 'sukien' ? 'lhZOrc' : ''}`}>
+                    <div className="I35ICb" jsaction="keydown:mPuKz(QwLHlb); click:vHQTA(QwLHlb);">
+                      <Link className="aJHbb dk90Ob hDrhEe HlqNPb" jsname="QwLHlb" role="link" tabIndex={0} data-navtype={1} to="/botrua/sukien"  >Sự Kiện</Link>
+                    </div>
+                  </div>
+                </li>
+                <li jsname="ibnC6b" data-nav-level={1}>
+                  <div className={`PsKE7e r8s4j-R6PoUb IKA38e baH5ib oNsfjf ${pageActive() === 'ykien' ? 'lhZOrc' : ''}`} aria-current="true">
+                    <div className="I35ICb" jsaction="keydown:mPuKz(QwLHlb); click:vHQTA(QwLHlb);"><Link className="aJHbb dk90Ob hDrhEe HlqNPb" jsname="QwLHlb" role="link" tabIndex={0} data-navtype={1} aria-selected="true" to="/botrua/ykien"  >Ý kiến
+                      khách hàng</Link></div>
+                  </div>
+                </li>
+                <li jsname="ibnC6b" data-nav-level={1}>
+                  <div className={`PsKE7e r8s4j-R6PoUb IKA38e baH5ib oNsfjf ${pageActive() === 'lienhe' ? 'lhZOrc' : ''}`}>
+                    <div className="I35ICb" jsaction="keydown:mPuKz(QwLHlb); click:vHQTA(QwLHlb);"><Link className="aJHbb dk90Ob hDrhEe HlqNPb" jsname="QwLHlb" role="link" tabIndex={0} data-navtype={1} to="/botrua/lienhe"  >Liên hệ</Link>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
         }
         <div className="VLoccc K5Zlne QDWEj U8eYrb" style={{ backgroundColor: 'rgb(255, 255, 255)' }} jsname="rtFGi" aria-hidden="false">
           <div className="Pvc6xe">

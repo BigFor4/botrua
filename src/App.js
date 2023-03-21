@@ -8,9 +8,7 @@ import YKien from './YKien';
 import { useEffect } from 'react';
 const history = createBrowserHistory()
 function App() {
-  useEffect(() => {
 
-  }, [history])
   return (
     <Router history={history}>
       <Switch>
